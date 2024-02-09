@@ -53,7 +53,7 @@ Repeat these steps for the other files in the **"stitched"** folder, each corres
 :people_holding_hands: **Groups 2 and 3:** Illumination correction via BaSiC plugin
 * Install the BaSiC plugin via Fiji update sites (instructions above)
 * Open the script "Illumination_Basic.ijm"
-* Update parameter values (lines 12 to 15)
+* Update parameter values (lines 12 to 15) according to the instructions below
 	- For "img2_" set parameters to:
 	```
 	overlap = 1; // choose 1, 5 or 10
@@ -68,7 +68,7 @@ Repeat these steps for the other files in the **"stitched"** folder, each corres
 	grid_size_y = 6;
 	file_name = "C3-BrainSection";
 	```
-* Press the "Run button". A Dialog window will appear, and you should browse the folder named "uncorrected" inside the reference folder (e.g. "../images/illumination_correction/tiles/img2_1pc/uncorrected/").
+* Press the "Run button", a Dialog window will appear. Browse the folder named "uncorrected" inside the reference folder (e.g. "../images/illumination_correction/tiles/img2_1pc/uncorrected/").
 	- **Group 2:** run the script for "img2" with different overlap values ("img2_1pc", "img2_5pc" and "img2_10pc")
 	- **Group 3:** run the script for "img2_10pc" and "WSI_Brain"
 
@@ -81,7 +81,7 @@ Repeat these steps for the other files in the **"stitched"** folder, each corres
 :bulb: What happens as the number of tiles increases? (Group 3)
 
 :people_holding_hands: **Group 4:** Uneven focus on z-stacks
-* Open the image of interest in Fiji (from folder "../images/illumination_correction/uneven_focus/");
+* Open the image of interest in Fiji from folder "../images/illumination_correction/uneven_focus/";
 * Inspect the z-stack. What is wrong?
 * Create a copy of the reference stack ("Image->Duplicate", remember to select the "Duplicate stack" option)
 * Segment via thresholding ("Image->Adjust->Threshold..."). Keep the resulting segmented stack.
@@ -96,20 +96,20 @@ Repeat these steps for the other files in the **"stitched"** folder, each corres
 
 ## 2) Handling noise
 
-Microscopic images may be affected by different types of noise: dark noise from sensors, shot noise (due to inherent nature of light), readout noise (due to amplification and conversion of the signal). There are different image processing techniques that can be used to denoise images. In this workshop, we will focus on convolution filters. The image below shows the effect of the averaging filter during acquisition.
+Microscopic images may be affected by different types of noise: dark noise from sensors, shot noise (due to the inherent nature of light), and readout noise (due to amplification and conversion of the signal). Different image processing techniques can be used to denoise images. In this workshop, we will focus on convolution filters. The image below shows the effect of the averaging filter during acquisition.
 
 ![](images/averaging_filter.png?raw=true "Screenshot")
 
-Each group should take a specific reference image and generate the output measures using the script "Noise.ijm" script.
+Each group will work with a specific set of images and generate the output measures using the "Noise.ijm" script.
 
 :arrow_right: Images to be used in this session are located in "../images/noise/". When processing the "Tissue_" images, split the channels and select the DAPI channel before running the script ("Image->Color->Split Channels").
 
 :people_holding_hands: Group assignment:
-* Group 1: images "Nuclei_no_avg.nd2" and "Tissue_no_avg.nd2"
-* Group 2: images "Nuclei_avg_2x.nd2" and "Tissue_2x_avg.nd2"
-* Group 3: images "Nuclei_avg_4x.nd2" and "Tissue_4x_avg.nd2"
-* Group 4: images "Nuclei_avg_8x.nd2" and "Tissue_8x_avg.nd2"
-* Group 5: images "Nuclei_avg_16x.nd2" and "Tissue_16x_avg.nd2"
+* All groups: images "Nuclei_no_avg.nd2" and "Tissue_no_avg.nd2"
+* Group 1: images "Nuclei_avg_2x.nd2" and "Tissue_2x_avg.nd2"
+* Group 2: images "Nuclei_avg_4x.nd2" and "Tissue_4x_avg.nd2"
+* Group 3: images "Nuclei_avg_8x.nd2" and "Tissue_8x_avg.nd2"
+* Group 4: images "Nuclei_avg_16x.nd2" and "Tissue_16x_avg.nd2"
 
 :arrow_right: Instructions to run the script and generate the measures: 
 * Open the image of interest in Fiji;
@@ -118,7 +118,7 @@ Each group should take a specific reference image and generate the output measur
 * Inspect the Results table and the Roi Manager tool
 * Take some time to analyze the script!
 
-**Testing the Median filter**: uncomment line #20 of the script (by removing the "//" at beginning of the line, see below). Then re-run the script for the same reference images. Copy the measures to the shared file and compare the new measures with the previous values.
+**Testing the Median filter**: uncomment line #20 of the script (by removing the "//" at the beginning of the line; see below). Then, re-run the script for the same reference images. Copy the measures to the shared file and compare the new measures with the previous values.
 
 ```
 run("Median...", "radius=4");
