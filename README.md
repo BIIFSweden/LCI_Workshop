@@ -20,9 +20,9 @@ To follow up on the examples presented in this workshop, download the code avail
 
 * **10:20-11:20** Correction of uneven illumination
 * **11:25-12:20** Handling noise
-* **12:10-13.10** Lunch break
-* **13:10-14:10** Image artifacts that cannot be fixed
-* **14:15-15:10** Nuclei & Cell Segmentation
+* **12:20-13.20** Lunch break
+* **13:20-14:20** Image artifacts that cannot be fixed
+* **14:25-15:20** Nuclei & Cell Segmentation
 
 ## :muscle: Let's start!
 
