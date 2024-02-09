@@ -130,9 +130,9 @@ run("Median...", "radius=4");
 
 ## 3) Image artifacts
 
-Some image artifacts cannot be fixed by image analysis and may compromise intensity and shape measurements. Examples can be seen in the images below, such as, bleedtrough, saturation, under exposure and soft focus.
+Image analysis cannot fix some image artefacts, which may compromise intensity and shape measurements. Examples can be seen in the images below, such as bleedthrough, saturation, under-exposure and soft focus.
 
-### 3.1) Bleedtrough
+### 3.1) Bleedthrough
 
 ![](images/bleedtrough.png?raw=true "Screenshot")
 
@@ -146,7 +146,7 @@ Some image artifacts cannot be fixed by image analysis and may compromise intens
 
 ### Hands-on exercise
 
-You will work in groups to investigate how each artifact can affect image quantification.
+You will work in groups to investigate how each artefact can affect image quantification.
 
 :arrow_right: Images to be used in this session are located in "../images/image_artifacts/"
 
@@ -160,20 +160,20 @@ You will work in groups to investigate how each artifact can affect image quanti
 :arrow_right: Instructions to run the script: 
 * Open the image of interest in Fiji;
 * Open and run the script "ImageArtifacts.ijm";
-* From the "Log" window copy the values of the "total segmented area" and "average intensity" of each channel (green and red)
+* From the "Log" window, copy the values of the "total segmented area" and "average intensity" of each channel (green and red)
 * Take some time to analyze the script!
 
 Wait for all groups to complete the task and add results in the shared file. Then discuss:
 
 :bulb: How are the measures affected by each artifact?
 
-:bulb: How to avoid such artifacts during acquisition?
+:bulb: How do you avoid such artifacts during acquisition?
 
 ## 4) Nuclei & Cell Segmentation
 
-The segmentation of nuclei and cells is the starting point of several image analysis tasks in microscopy. In this assignment we will use Fiji to create a pipeline for the segmentation of cells and nuclei. Be inspired by the image below! 
+The segmentation of nuclei and cells is the starting point of several image analysis tasks in microscopy. In this assignment, we will use Fiji to create a pipeline for segmenting cells and nuclei. Be inspired by the image below! 
 
-You can choose to work with your own images, acquired during the LCI Microscopy course, or, you can work with the images located in the folder "../images/noise/". 
+You can choose to work with your own images acquired during the LCI Microscopy course, or you can work with the images located in the folder "../images/noise/". 
 
 ![](images/cell_nuclei_segmentation.png?raw=true "Screenshot")
 
@@ -181,10 +181,10 @@ You can choose to work with your own images, acquired during the LCI Microscopy 
 * Test the different thresholding algorithms in Fiji ("Image->Adjust->Threshold...");
 * Remember that the background subtraction can improve the segmentation results;
 * Pre-processing: you can find several convolution filters in "Process->Filters";
-* Remember to create a copy of the original image in case you want to quantify pixel intensity
+* Remember to create a copy of the original image if you want to quantify pixel intensity
 * If thresholding does not perform well, you can try [StarDist](https://github.com/stardist/stardist-imagej)
 	- Available as a plugin for FIJI. Two trained models: fluorescent nuclei and H&E stained images
-* Activate the macro recording function "Plugins->Macros->Record..." in Fiji to save all the functions and plugins that you use. Then try to create your own script!
+* Activate the macro recording function "Plugins->Macros->Record..." in Fiji to save all the functions and plugins you use. Then, try to create your own script!
 
 ## Acknowledgements
 
