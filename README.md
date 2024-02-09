@@ -1,25 +1,25 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# :microscope: LCI Microscopy Course: Image Analysis Workshop 2023
+# :microscope: LCI Microscopy Course: Image Analysis Workshop 2024
 
-Welcome to the image analysis workshop organized by the [Bioimage Informatics facility](https://www.scilifelab.se/units/bioimage-informatics/) & the [Live Cell Imaging facility](https://ki.se/en/bionut/live-cell-imaging-core-facility-lci) for the LCI Microscopy course 2023! During this workshop you will:
+Welcome to the image analysis workshop organized by the [Bioimage Informatics facility](https://www.scilifelab.se/units/bioimage-informatics/) & the [Live Cell Imaging facility](https://ki.se/en/bionut/live-cell-imaging-core-facility-lci) as part of the LCI Microscopy course 2024! During this workshop you will:
 
 - [x] See typical examples of what can be done with image analysis and the limitations of each example
-- [x] Understand which image artifacts can be corrected by image analysis in some cases but are easier to correct before acquisition, e.g., uneven illumination, noise
-- [x] Understand which image artifacts cannot be corrected by image analysis, e.g., saturation, under exposure, bleedthrough
+- [x] Understand which image artefacts can be corrected by image analysis in some cases but are easier to correct before acquisition, e.g., uneven illumination, noise
+- [x] Understand which image artefacts cannot be corrected by image analysis, e.g., saturation, underexposure, bleedthrough
 
-In order to follow-up the examples presented in this workshop, download the code available in this GitHub page (you can do that by clicking on the green buttom above). In addition, you also have to download Fiji from the following [link](https://fiji.sc/). The installation of additional required plugins will be detailed in the next sessions.
+To follow up on the examples presented in this workshop, download the code available on this GitHub page (you can do that by clicking on the green button above). In addition, you also have to download Fiji from the following [link](https://fiji.sc/). The installation of additional required plugins will be detailed in the following sections.
 
-:bookmark: **Tip**: To open an image in Fiji, go to "File->Open". Then browse the image of interest. If the Bio-Formats plugin interface appears, check the import options and press "OK"
+:bookmark: **Tip**: To open an image in Fiji, go to "File->Open". Then, browse the image of interest. If the Bio-Formats plugin interface appears, check the import options and press "OK."
 
-:bookmark: **Tip**: You can open a script in Fiji by dragging and droping a file in the main interface or through "Plugins->Macros->Edit...". Then browse the code to be used in each session.
+:bookmark: **Tip**: You can open a script in Fiji by dragging and dropping a file in the main interface or through "Plugins->Macros->Edit...". Then, browse the code to be used in each session.
 
-:people_holding_hands: **Group work**: For each activity you will be radomly assigned to breakout rooms to work in groups. Results should be reported in the shared document (link to be sent during workshop).
+:people_holding_hands: **Group work**: You will be randomly assigned to breakout rooms to work in groups for each activity. Results should be reported in the shared document (link to be sent during the workshop).
 
 ## :alarm_clock: Schedule
 
-* **10:10-11:10** Correction of uneven illumination
-* **11:15-12:10** Handling noise
+* **10:20-11:20** Correction of uneven illumination
+* **11:25-12:20** Handling noise
 * **12:10-13.10** Lunch break
 * **13:10-14:10** Image artifacts that cannot be fixed
 * **14:15-15:10** Nuclei & Cell Segmentation
@@ -28,15 +28,15 @@ In order to follow-up the examples presented in this workshop, download the code
 
 ## 1) Uneven illumination - how to correct
 
-Uneven illumination can be due to different factors, e.g., microscope settings; sample artifacts (samples that are not flat); shading or vignetting (attenuation of the pixel intensity from the center of the optical axis to the edges). 
+Uneven illumination can be due to different factors, e.g., microscope settings, sample artefacts (samples that are not flat), shading or vignetting (attenuation of the pixel intensity from the centre of the optical axis to the edges). 
 
-Uneven illumination can cause discontinuities in whole slide images, background bleaching in time-lapse fluorescent images and compromise downstream analysis. In this workshop we will explore two algorithms that can be used to correct such artifacts.
+Uneven illumination can cause discontinuities in whole slide images, background bleaching in time-lapse fluorescent images and compromise downstream analysis. In this workshop, we will explore two algorithms that can be used to correct such artefacts.
 * [Rolling-ball](https://imagej.net/plugins/rolling-ball-background-subtraction) algorithm
 * [BaSiC](https://github.com/marrlab/BaSiC#imagejfiji-plugin) plugin (click on the link to follow installation instructions)
 
 :arrow_right: Images to be used in this session are located in "../images/illumination_correction/"
 
-Wait to be assigned to one of the breakout rooms and then follow the instructions corresponding to your group:
+Join your breakout room and then follow the instructions corresponding to your group:
 
 :people_holding_hands: **Group 1:** Illumination correction via rolling ball algorithm
 * Open an image from the **"stitched"** folder
@@ -44,9 +44,9 @@ Wait to be assigned to one of the breakout rooms and then follow the instruction
 * Go to "Process->Subtract Background..."
 * Choose the radius of the rolling ball algorithm and press OK
 
-Repeat these steps for the other files in the **"stitched"** folder. Each file corresponding to a different overlap (1%, 5% and 10%). You can also try to correct individual tiles from the "tiles" folder. Try different values of the radius parameter.
+Repeat these steps for the other files in the **"stitched"** folder, each corresponding to a different overlap (1%, 5% and 10%). You can also try to correct individual tiles from the "tiles" folder. Try different values of the radius parameter.
 
-:bulb: What happens as the size of radius increases?
+:bulb: What happens as the size of the radius increases?
 
 :bulb: What happens as the overlap increases?
 
@@ -68,7 +68,7 @@ Repeat these steps for the other files in the **"stitched"** folder. Each file c
 	grid_size_y = 6;
 	file_name = "C3-BrainSection";
 	```
-* Press the "Run button". A Dialog window will appear and you should browse the folder named "uncorrected" inside the reference folder (e.g. "../images/illumination_correction/tiles/img2_1pc/uncorrected/").
+* Press the "Run button". A Dialog window will appear, and you should browse the folder named "uncorrected" inside the reference folder (e.g. "../images/illumination_correction/tiles/img2_1pc/uncorrected/").
 	- **Group 2:** run the script for "img2" with different overlap values ("img2_1pc", "img2_5pc" and "img2_10pc")
 	- **Group 3:** run the script for "img2_10pc" and "WSI_Brain"
 
@@ -85,7 +85,7 @@ Repeat these steps for the other files in the **"stitched"** folder. Each file c
 * Inspect the z-stack. What is wrong?
 * Create a copy of the reference stack ("Image->Duplicate", remember to select the "Duplicate stack" option)
 * Segment via thresholding ("Image->Adjust->Threshold..."). Keep the resulting segmented stack.
-* Select the original stack and apply a maximum intensity projection (MIP), via "Image->Stacks->Z project..."
+* Select the original stack and apply a maximum intensity projection (MIP) via "Image->Stacks->Z project..."
 * Create two copies of the projected image. 
 	- Apply the rolling ball algorithm ("Process->Subtract Background...") in one of them
 * Segment both copies via thresholding
