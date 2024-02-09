@@ -128,7 +128,7 @@ run("Median...", "radius=4");
 
 :bulb: What happens if we don't use the median filter?
 
-## 3) Image artifacts
+## 3) Image artefacts
 
 Image analysis cannot fix some image artefacts, which may compromise intensity and shape measurements. Examples can be seen in the images below, such as bleedthrough, saturation, under-exposure and soft focus.
 
@@ -151,11 +151,11 @@ You will work in groups to investigate how each artefact can affect image quanti
 :arrow_right: Images to be used in this session are located in "../images/image_artifacts/"
 
 :people_holding_hands: Group assignment:
-* Group 1: image "../images/image_artifacts/sequential.nd2"
-* Group 2: image "../images/image_artifacts/simultaneous.nd2"
-* Group 3: image "../images/image_artifacts/seq_saturated.nd2"
-* Group 4: image "../images/image_artifacts/seq_undexposed.nd2"
-* Group 5: image "../images/image_artifacts/soft_focus.nd2"
+* All groups: image "../images/image_artifacts/sequential.nd2"
+* Group 1: image "../images/image_artifacts/simultaneous.nd2"
+* Group 2: image "../images/image_artifacts/seq_saturated.nd2"
+* Group 3: image "../images/image_artifacts/seq_undexposed.nd2"
+* Group 4: image "../images/image_artifacts/soft_focus.nd2"
 
 :arrow_right: Instructions to run the script: 
 * Open the image of interest in Fiji;
