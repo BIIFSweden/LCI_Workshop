@@ -12,6 +12,8 @@ Welcome to the image analysis workshop organized by the [Bioimage Informatics fa
 
 To follow up on the examples presented in this workshop, download the code available on this GitHub page (you can do that by clicking on the green `<Code>` button above). In addition, you also have to download Fiji from the following [link](https://fiji.sc/). The installation of additional required plugins will be detailed in the following sections.
 
+:open_file_folder: You can find the datasets for this workshop located in [this shared drive](https://drive.google.com/drive/folders/1yFsiJsAXIVlkH5VHRr8m6Q82QgwxOeqR?usp=drive_link).
+
 :bookmark: **Tip**: To open an image in Fiji, go to `File > Open`. Then, browse the image of interest. If the Bio-Formats plugin interface appears, check the import options and press `OK`.
 
 :bookmark: **Tip**: You can open a script in Fiji by dragging and dropping a file in the main interface or through `Plugins > Macros > Edit...`. Then, browse the code to be used in each session.
@@ -42,7 +44,7 @@ Uneven illumination can cause discontinuities when stitching whole slide images,
 
 * [BaSiC](https://github.com/marrlab/BaSiC#imagejfiji-plugin) plugin (click on the link to follow installation instructions)
 
-:arrow_right: Images to be used in this session are located in [this shared drive](https://drive.google.com/drive/folders/1yFsiJsAXIVlkH5VHRr8m6Q82QgwxOeqR?usp=drive_link) within the folder `/images/illumination_correction/`.
+:arrow_right: Images to be used in this section are located in within the folder `/images/illumination_correction/`.
 
 Join your breakout room and then follow the instructions corresponding to your group:
 
