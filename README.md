@@ -6,9 +6,9 @@ Welcome to the image analysis workshop organized by the [Bioimage Informatics fa
 
 - [x] See typical examples of what can be done with image analysis and the limitations of each example.
 
-- [x] Understand which image artefacts can be corrected by image analysis in some cases but are easier to correct before acquisition, e.g., uneven illumination, noise.
+- [x] Understand which image artifacts can be corrected by image analysis in some cases but are easier to correct before acquisition, e.g., uneven illumination, noise.
 
-- [x] Understand which image artefacts cannot be corrected by image analysis, e.g., saturation, underexposure.
+- [x] Understand which image artifacts cannot be corrected by image analysis, e.g., saturation, underexposure.
 
 To follow up on the examples presented in this workshop, download the code available on this GitHub page (you can do that by clicking on the green `<Code>` button above). In addition, you also have to download Fiji from the following [link](https://fiji.sc/). The installation of additional required plugins will be detailed in the following sections.
 
@@ -36,9 +36,9 @@ To follow up on the examples presented in this workshop, download the code avail
 
 ## 1) Uneven illumination - how to correct
 
-Uneven illumination can be due to different factors, e.g., paraxial approximation, microscope settings, sample artefacts (samples that are not flat), shading or vignetting (attenuation of the pixel intensity from the centre of the optical axis to the edges). 
+Uneven illumination can be due to different factors, e.g., paraxial approximation, microscope settings, sample artifacts (samples that are not flat), shading or vignetting (attenuation of the pixel intensity from the centre of the optical axis to the edges). 
 
-Uneven illumination can cause discontinuities when stitching whole slide images, background bleaching in time-lapse fluorescent images and compromise downstream analysis when comparing intensities of objects from different regions of the image. In this workshop, we will explore two algorithms that can be used to correct such artefacts.
+Uneven illumination can cause discontinuities when stitching whole slide images, background bleaching in time-lapse fluorescent images and compromise downstream analysis when comparing intensities of objects from different regions of the image. In this workshop, we will explore two algorithms that can be used to correct such artifacts.
 
 * [Rolling-ball](https://imagej.net/plugins/rolling-ball-background-subtraction) algorithm
 
@@ -162,9 +162,9 @@ run("Median...", "radius=4");
 
 :bulb: What happens if we don't use the median filter?
 
-## 3) Image artefacts
+## 3) Image artifacts
 
-Image analysis cannot fix some image artefacts, which may compromise intensity and shape measurements. Examples can be seen in the images below, such as bleedthrough, saturation, under-exposure and soft focus.
+Image analysis cannot fix some image artifacts, which may compromise intensity and shape measurements. Examples can be seen in the images below, such as bleedthrough, saturation, under-exposure and soft focus.
 
 ### 3.1) Bleedthrough
 
