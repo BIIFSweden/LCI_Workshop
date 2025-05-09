@@ -42,6 +42,8 @@ To follow up on the examples presented in this workshop, download the code avail
 
 ## 1) Uneven illumination - how to correct
 
+:open_file_folder: **Dataset**: [img2](https://doi.org/10.5281/zenodo.15374885) and [WSI_Brain.zip](https://zenodo.org/records/6334810).
+
 Uneven illumination can be due to different factors, e.g., paraxial approximation, microscope settings, sample artifacts (samples that are not flat), shading or vignetting (attenuation of the pixel intensity from the centre of the optical axis to the edges). 
 
 Uneven illumination can cause discontinuities when stitching whole slide images, background bleaching in time-lapse fluorescent images and compromise downstream analysis when comparing intensities of objects from different regions of the image. In this workshop, we will explore two algorithms that can be used to correct such artifacts.
@@ -126,6 +128,8 @@ Repeat these steps for the other files in the **`stitched`** folder, each corres
 
 ## 2) Handling noise
 
+:open_file_folder: [Dataset](https://doi.org/10.5281/zenodo.15175309)
+
 Microscopy images may be affected by different types of noise: dark noise from sensors, shot noise (due to the inherent nature of light), and readout noise (due to amplification and conversion of the signal). Different image processing techniques can be used to denoise images. In this workshop, we will focus on convolution filters. The image below shows the effect of the averaging filter during acquisition.
 
 ![](images/averaging_filter.png?raw=true "Screenshot")
@@ -169,6 +173,8 @@ run("Median...", "radius=4");
 :bulb: What happens if we don't use the median filter?
 
 ## 3) Image artifacts
+
+:open_file_folder: [Dataset](https://doi.org/10.5281/zenodo.15374754)
 
 Image analysis cannot fix some image artifacts, which may compromise intensity and shape measurements. Examples can be seen in the images below, such as bleedthrough, saturation, under-exposure and soft focus.
 
