@@ -12,7 +12,13 @@ Welcome to the image analysis workshop organized by the [Bioimage Informatics fa
 
 To follow up on the examples presented in this workshop, download the code available on this GitHub page (you can do that by clicking on the green `<Code>` button above). In addition, you also have to download Fiji from the following [link](https://fiji.sc/). The installation of additional required plugins will be detailed in the following sections.
 
-:open_file_folder: You can find the datasets for this workshop located in [this shared drive](https://drive.google.com/drive/folders/1yFsiJsAXIVlkH5VHRr8m6Q82QgwxOeqR?usp=drive_link).
+:open_file_folder: You can find the datasets for this workshop located in Zenodo. Please download the following:
+
+- Uneven Illumination: [img2](https://doi.org/10.5281/zenodo.15374885) and [WSI_Brain.zip](https://zenodo.org/records/6334810).
+
+- [Handling Noise](https://doi.org/10.5281/zenodo.15175309)
+
+- [Image Artifacts](https://doi.org/10.5281/zenodo.15374754)
 
 :bookmark: **Tip**: To open an image in Fiji, go to `File > Open`. Then, browse the image of interest. If the Bio-Formats plugin interface appears, check the import options and press `OK`.
 
